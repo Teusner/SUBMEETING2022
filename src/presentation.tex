@@ -64,7 +64,7 @@
 		\subsection{Context}
 			\begin{frame}{Context}{Safe and Resilient control}
 				\centering
-				\begin{minipage}{0.6\textwidth}
+				\begin{minipage}[c]{0.6\textwidth}
 					\onslide<1->{
 						\begin{block}{Safe navigation}
 							\begin{itemize}
@@ -83,7 +83,7 @@
 					}
 				\end{minipage}
 				\hfill
-				\begin{minipage}{0.35\textwidth}
+				\begin{minipage}[c]{0.35\textwidth}
 					\begin{figure}
 						\includegraphics[width=\textwidth, trim=100 0 200 0, clip]{images/boat_view.jpg}
 						\caption{Sailing boat}
@@ -430,13 +430,20 @@
 			\begin{frame}{Example}{Simulation}
 				\centering
 				\begin{figure}
-					\movie{\includegraphics[width=\textwidth]{images/cover.png}}{output.mp4}
+					\movie{\includegraphics[width=\textwidth]{images/cover.png}}{navigation.mp4}
 				\end{figure}
 			\end{frame}
 
 			\begin{frame}{Example}{Conclusion}
 				\centering
-				\begin{minipage}{0.6\textwidth}
+				\begin{minipage}[c]{0.6\textwidth}
+					\begin{block}{Innovation}
+						\begin{itemize}
+							\item Complete control loop using set methods
+							\item Easy sensor data fusion
+							\item Safe and resilient control
+						\end{itemize}
+					\end{block}
 					\begin{block}{Conclusion}
 						\begin{itemize}
 							\item Works better in highly nonlinear fields
@@ -444,6 +451,13 @@
 							\item Still a simulation will be tried in guaranteed robot control experiments.
 						\end{itemize}
 					\end{block}
+				\end{minipage}
+				\hfill
+				\begin{minipage}[c]{0.3\textwidth}
+					\begin{figure}
+						\includegraphics[width=\textwidth]{images/boat_end.jpg}
+						\caption{Sailing boat}
+					\end{figure}
 				\end{minipage}
 			\end{frame}
 \end{document}
