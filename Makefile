@@ -31,9 +31,15 @@ $(IMAGES_PDF): $(IMAGES_BUILD_DIR)/%.pdf : $(SCRIPT_DIR)/%.py
 	$(CONDA_ACTIVATE) proteus ; python3 $< $@
 
 # Video
-video:
+video: $(PRESENTATION_BUILD_DIR)/compass.mp4 $(PRESENTATION_BUILD_DIR)/navigation.mp4
+
+$(PRESENTATION_BUILD_DIR)/compass.mp4:
+	$(dir_guard)
 	cp images/compass.mp4 $(PRESENTATION_BUILD_DIR)/compass.mp4
-	cp images/navigation.mp4 $(PRESENTATION_BUILD_DIR)/navigation.mp4
+
+$(PRESENTATION_BUILD_DIR)/navigation.mp4:
+	$(dir_guard)
+	cp images/compass.mp4 $(PRESENTATION_BUILD_DIR)/navigation.mp4
 
 # Abstract
 abstract: $(ABSTRACT_BUILD_DIR)/abstract.pdf
