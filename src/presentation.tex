@@ -64,6 +64,38 @@
 	\section{Introduction}
 	\AllSectionsWithTitlePage
 
+		\subsection{Context}
+			\begin{frame}{Context}{Safe and Resilient control}
+				\centering
+				\begin{minipage}{0.6\textwidth}
+					\onslide<1->{
+						\begin{block}{Safe navigation}
+							\begin{itemize}
+								\item Guaranteed state estimation
+								\item Ensure non-collision
+							\end{itemize}
+						\end{block}
+					}
+					\onslide<2->{
+						\begin{block}{Resilient navigation}
+							\begin{itemize}
+								\item Keeps working with the loss of sensors
+								\item Detect sensor inconsistencies
+							\end{itemize}
+						\end{block}
+					}
+				\end{minipage}
+				\hfill
+				\begin{minipage}{0.35\textwidth}
+					\begin{figure}
+						\includegraphics[width=\textwidth, trim=100 0 200 0, clip]{images/boat_view.jpg}
+						\caption{Sailing boat}
+					\end{figure}
+				\end{minipage}
+			\end{frame}
+
+	\section{Formalism}
+
 		\subsection{State Equation}
 
 			\begin{frame}{Formalism}{State Equation}
@@ -138,7 +170,7 @@
 				\end{minipage}
 			\end{frame}
 
-		\subsection{Interval analysis approach}
+		\subsection{Set methods}
 
 			\begin{frame}{Introduction}{Nonlinear systems}
 				\centering
@@ -197,8 +229,8 @@
 					\onslide<1->{
 						\begin{block}{Dead reckoning}
 							\begin{itemize}
-								\item Proprioceptive informations (odometry, inertial, ...)
-								\item Robot achieve dead reckoning
+								\item Proprioceptive sensors (odometry, inertial, ...)
+								\item Estimation of the robot trajectory
 							\end{itemize}
 						\end{block}
 					}
@@ -217,6 +249,7 @@
 						\begin{tikzpicture}
 							\draw[visible on=<3->, fill=gray!50] (0, 0) rectangle (1, 1);
 							\node[visible on=<3->] at (0.5, 1.2) {$k-1$};
+							\filldraw[RubineRed!80, visible on=<3->] (0.4, 0.4) circle (1pt);
 							\draw[orange, fill=orange!50, visible on=<4>] (0.7, 0.5) rectangle (2.1, -0.8);
 							\node[visible on=<4->, orange] at (1.4, 0.7) {$k$};
 							\filldraw[NavyBlue!90, visible on=<4->] (1.2, 0) circle (1pt);
@@ -225,28 +258,7 @@
 				\end{minipage}
 			\end{frame}
 
-		% \subsection{GNSS measurements}
-		% 	\begin{frame}{State estimation}{Dead reckoning}
-		% 		\centering
-		% 		\begin{minipage}{0.6\textwidth}
-		% 			\onslide<1->{
-		% 				\begin{block}{Dead reckoning}
-		% 					\begin{itemize}
-		% 						\item Proprioceptive informations (odometry, inertial, ...)
-		% 						\item Robot achieve dead reckoning
-		% 					\end{itemize}
-		% 				\end{block}
-		% 			}
-		% 			\onslide<2->{
-		% 				\begin{block}{Scope}
-		% 					\begin{itemize}
-		% 						\item Initial set enclosing robot's state
-		% 						\item Divergent set due to uncertainties
-		% 					\end{itemize}
-		% 				\end{block}
-		% 			}
-		% 		\end{minipage}
-		% 	\end{frame}
+		
 
 		\subsection{Field measurements}
 			\begin{frame}{Navigation}{Field measurements}
